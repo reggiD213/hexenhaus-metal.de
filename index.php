@@ -21,4 +21,3 @@ if (file_exists('pages' . DS . $page . '.php')) {
 }
 
 require_once 'overall-footer.tpl.php';
-
