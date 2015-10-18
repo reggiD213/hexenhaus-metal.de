@@ -1,7 +1,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-	<meta name="description" content="Hexenhaus Jugendtreff Ulm Metal Music Club" />
+	<meta name="description" content="Hexenhaus Ulm Metal Music Club und Jugendtreff" />
+	<meta name="keywords" content="Hexenhaus Ulm Metal Music Club Jugendtreff Stadtjugendring Black Thrash Death Heavy Power Halloween Konzert Gigs Bands Lokal Bar Kneipe Treff" />
 	<title>Hexenhaus e.V.</title>
 	<link href="<?php echo BASEPATH; ?>/css/normalize.css" rel="stylesheet">
 	<link href="<?php echo BASEPATH; ?>/css/style.css" rel="stylesheet">
