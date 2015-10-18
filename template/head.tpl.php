@@ -1,6 +1,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="description" content="Hexenhaus Jugendtreff Ulm Metal Music Club" />
 	<title>Hexenhaus e.V.</title>
 	<link href="<?php echo BASEPATH; ?>/css/normalize.css" rel="stylesheet">
 	<link href="<?php echo BASEPATH; ?>/css/style.css" rel="stylesheet">
