@@ -4,6 +4,8 @@
 	<meta name="description" content="Hexenhaus Ulm Metal Music Club und Jugendtreff" />
 	<meta name="keywords" content="Hexenhaus Ulm Metal Music Club Jugendtreff Stadtjugendring Black Thrash Death Heavy Power Halloween Konzert Gigs Bands Lokal Bar Kneipe Treff" />
 	<title>Hexenhaus e.V.</title>
+	<link rel="shortcut icon" href="<?php echo BASEPATH; ?>/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?php echo BASEPATH; ?>/images/favicon.ico" type="image/x-icon">
 	<link href="<?php echo BASEPATH; ?>/css/normalize.css" rel="stylesheet">
 	<link href="<?php echo BASEPATH; ?>/css/style.css" rel="stylesheet">
 	<link href="<?php echo BASEPATH; ?>/css/font-awesome.min.css" rel="stylesheet">
