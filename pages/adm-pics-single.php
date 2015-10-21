@@ -16,7 +16,7 @@ $picDelete = new PicDelete($pic);
 	<ul class="layout">
 		<li>
 			<label for="pic_name">Name: </label>
-			<input id="pic_name" class="pic_input" type="text" value="<?php echo $pic -> getName(); ?>" name="name" autocomplete="off" required />
+			<input id="pic_name" class="pic_input" type="text" value="<?php echo $pic -> getName(); ?>" name="name" autocomplete="off" placeholder="Bildbeschreibung eingeben" required />
 		</li>
 		<li>
 			<label for="pic_image">Image: </label><br>

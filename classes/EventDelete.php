@@ -16,10 +16,12 @@ class EventDelete extends Database {
 	}
 
 	private function deleteFiles($event) {
-		$this -> thumbnail = $_SERVER['DOCUMENT_ROOT'] . DS . $event -> getThumb();
-		$this -> folder = $_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . EVENTIMAGEPATH . DS . strftime("%Y_%m_%d", $event -> getTimestamp());
+		if ($event -> getThumb() != BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg') {
+			$this -> thumbnail = $_SERVER['DOCUMENT_ROOT'] . DS . $event -> getThumb();
+			unlink($this -> thumbnail);
+		}
 		
-		unlink($this -> thumbnail);
+		$this -> folder = $_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . EVENTIMAGEPATH . DS . getDate('mysql');
 		rmdir($this -> folder);
 	}
 	

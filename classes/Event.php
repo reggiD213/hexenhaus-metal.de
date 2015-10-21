@@ -30,8 +30,8 @@ class Event {
 
 	public function getThumb() {
 		if (isset($this -> event)) {
-			if (file_exists($_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . EVENTIMAGEPATH . DS . strftime("%Y_%m_%d", $this -> getTimestamp()) . DS . $this -> event['thumbnail'])) {
-				return BASEPATH . DS . EVENTIMAGEPATH . DS . strftime("%Y_%m_%d", $this -> getTimestamp()) . DS . $this -> event['thumbnail'];
+			if (file_exists($_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getDate('mysql') . DS . $this -> event['thumbnail'])) {
+				return BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getDate('mysql') . DS . $this -> event['thumbnail'];
 			} else {
 				return BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg';
 			}
@@ -63,7 +63,7 @@ class Event {
 			$price = number_format($price, 2, $divider, '');
 			return $price;
 		} else {
-			return "0";
+			return "0,00";
 		}
 	}
 
@@ -71,7 +71,7 @@ class Event {
 		if (isset($this -> event)) {
 			return $this -> event['guests'];
 		} else {
-			return "0";
+			return null;
 		}
 	}
 
@@ -85,10 +85,36 @@ class Event {
 		}
 	}
 
-	public function getDate() {
-		$date = $this -> getTimestamp();
-		$date = strftime("%A, %d.%m.%Y, %H:%M", $date);
-		return $date;
+	public function getDate($format = 'readable') {
+		if (isset($this -> event)) {
+			$date = $this -> event['date'];
+			if ($format == 'mysql') {
+				return $date;
+			}
+			$date = strtotime($date);
+			if ($format == 'timestamp') {
+				return $date;
+			}
+			if ($format == 'jquery') {
+				$date = strftime("%Y, %m, %d", $date);
+				return $date;
+			}
+			if ($format == 'readable') {
+				$date = strftime("%A, %d.%m.%Y", $date);
+				return $date;
+			}
+		} else {
+			return strftime("%Y, %m, %d", time());
+		}
+	}
+		
+	public function getTime() {
+		if (isset($this -> event)) {
+			$time = substr($this -> event['time'],0,5);
+			return $time;
+		} else {
+			return "20:00";
+		}
 	}
 
 	public function debug() {

@@ -9,6 +9,7 @@ class EventInsert extends Database {
 	private $price;
 	private $guests;
 	private $date;
+	private $time;
 	
 	
 	public function __construct() {
@@ -30,8 +31,7 @@ class EventInsert extends Database {
 	
 	private function doThumbnail() {
 		$time = $this -> date;
-		$time = strtotime($time);
-		$eventfolder = EVENTIMAGEPATH . DS . strftime("%Y_%m_%d",$time);
+		$eventfolder = EVENTIMAGEPATH . DS . $time;
 
 		if (!file_exists($eventfolder)) {
 		    mkdir($eventfolder, 0777, true);
@@ -46,18 +46,19 @@ class EventInsert extends Database {
 		
 		$uploadfile = $eventfolder . DS . $newname;
 		
-		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);		
+		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);
 	}
 	
 	private function doInsert() {
 		$sql = "INSERT INTO events
-				(title, thumbnail, desc_short, desc_long, price, guests, date) 
+				(title, thumbnail, desc_short, desc_long, price, guests, date, time) 
 				values
-				('$this->title', '$this->thumbnail', '$this->desc_short', '$this->desc_long', '$this->price', '$this->guests', '$this->date')";
-								
+				('$this->title', '$this->thumbnail', '$this->desc_short', '$this->desc_long', '$this->price', '$this->guests', '$this->date', '$this->time')";
+
 		$result = $this -> db_connection -> query($sql);
 		
 		$newId = mysqli_insert_id($this -> db_connection);
+		
 		header('Location: ' . BASEPATH . DS . 'members' . DS . 'adm-events' . DS . $newId);
 	}
 	

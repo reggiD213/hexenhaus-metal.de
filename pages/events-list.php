@@ -15,7 +15,10 @@ for ($i = 0; $i < $pages; $i++) {
 
 <div class="row">
 	<div class="content67">
-		<h2>Kommende Veranstaltungen</h2>
+		<h2>
+			<?php if ($period == "upcomming") echo 'Kommende Veranstaltungen'; ?> 
+			<?php if ($period == "all")	echo 'Vergangene und kommende Veranstaltungen'; ?>
+		</h2>
 		<hr>
 		<ul class="events layout list">
 			<?php for($i = ($pagenum - 1) * PERPAGE; $i < $events -> getTotalEvents() && $i < ($pagenum * PERPAGE); $i++) {
@@ -26,13 +29,13 @@ for ($i = 0; $i < $pages; $i++) {
 						<img class="left" src="<?php echo $event -> getThumb(); ?>">
 					</a>
 					<a href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>">
-						<h3 class="glow"><?php echo $event -> getDate(); ?></h3>
+						<h3 class="glow"><?php echo $event -> getDate('readable'); ?></h3>
 						<hr>
 						<h3><?php echo $event -> getTitle(); ?></h3>
 					</a>
 					<hr>
 					<p><?php echo $event -> getDescShort(); ?></p>
-					<span class="dull">Eintritt: <?php echo $event -> getPrice(); ?> €</span>
+					<span class="dull">Eintritt: <?php echo $event -> getPrice() . "€ , Einlass: " . $event -> getTime(); ?></span>
 					<hr>
 					<a href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>"><button><i class="fa fa-info-circle"></i> Details</button></a>
 				</li>

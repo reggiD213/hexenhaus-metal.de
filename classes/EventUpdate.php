@@ -59,7 +59,8 @@ class EventUpdate extends Database {
 				desc_long = '$this->desc_long',
 				price = '$this->price',
 				guests = '$this->guests',
-				date = '$this->date'
+				date = '$this->date',
+				time = '$this->time'
 				WHERE event_id = '$this->event_id'";
 				
 		$this->result = $this->db_connection->query($sql);
