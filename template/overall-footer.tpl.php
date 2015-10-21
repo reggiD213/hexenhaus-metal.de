@@ -17,7 +17,7 @@
 				altField: '#event_date',
 				dateFormat: 'yy-mm-dd',
 				regional: 'de',
-				defaultDate: new Date(<?php if ($eventId != 'new') echo $event -> getDate('jquery'); ?>)
+				defaultDate: new Date(<?php if ($eventId != 'new' && $eventId != null) echo $event -> getDate('jquery'); ?>)
 			});
 			
 			$('#event_date').change(function(){

@@ -29,7 +29,7 @@ for ($i = 0; $i < $pages; $i++) {
 
 				<div class="leftdiv left">
 					<a target="_blank" href="<?php echo $band -> getLink(); ?>">
-						<img src="<?php echo $band -> getThumb(); ?>">
+						<img src="<?php echo $band -> getThumb(); ?>" alt="<?php echo $band -> getName(); ?>">
 					</a>
 				</div>
 				
@@ -43,7 +43,7 @@ for ($i = 0; $i < $pages; $i++) {
 					<p><?php echo $band -> getDesc(); ?></p>
 					<a target="_blank" href="<?php echo $band -> getLink(); ?>"><span class="dull">zur Homepage</span></a>
 					<?php if ($band -> getSoundcloud() != null) { ?>
-					<iframe height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/<?php echo $band -> getSoundcloud(); ?>"></iframe>
+					<iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/<?php echo $band -> getSoundcloud(); ?>"></iframe>
 					<?php } ?>
 				</div>
 

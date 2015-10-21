@@ -20,6 +20,11 @@ textarea {
 	resize: none;
 }
 
+iframe {
+	overflow: hidden;
+	border: 0;
+}
+
 body {
 	background-color: #000000;
 }
