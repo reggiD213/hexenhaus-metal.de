@@ -30,7 +30,7 @@ class Band {
 	public function getThumb() {
 		if (isset($this -> band)) {
 			if (file_exists($_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . BANDIMAGEPATH . DS . $this -> band['thumbnail'])) {
-				return BASEPATH . DS . BANDIMAGEPATH . DS . $this -> band['thumbnail'];
+				return BASEPATH . DS . BANDIMAGEPATH . DS . rawurlencode($this -> band['thumbnail']);
 			} else {
 				return BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg';
 			}

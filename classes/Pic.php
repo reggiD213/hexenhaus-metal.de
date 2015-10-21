@@ -30,7 +30,7 @@ class Pic {
 	public function getFilename() {
 		if (isset($this -> pic)) {
 			if (file_exists($_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . UPLOADIMAGEPATH . DS . $this -> pic['filename'])) {
-				return BASEPATH . DS . UPLOADIMAGEPATH . DS . $this -> pic['filename'];
+				return BASEPATH . DS . UPLOADIMAGEPATH . DS . rawurlencode($this -> pic['filename']);
 			} else {
 				return BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg';
 			}

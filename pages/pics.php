@@ -14,7 +14,7 @@ $pics = new Pics();
 				<div class="table left">
 					<div class="cell">
 						<a href="<?php echo $pic -> getFilename(); ?>" data-lightbox="Bildergalerie" data-title="<?php echo $pic -> getName(); ?>">
-							<img src="<?php echo $pic -> getFilename(); ?>" alt="<?php echo $pic -> getName(); ?>">
+							<img src="<?php echo $pic -> getFilename(); ?>" alt="<?php echo $pic -> getName(); ?>" alt="<?php echo $pic -> getName(); ?>">
 						</a>
 					</div>
 				</div>

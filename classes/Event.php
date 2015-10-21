@@ -31,7 +31,7 @@ class Event {
 	public function getThumb() {
 		if (isset($this -> event)) {
 			if (file_exists($_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getDate('mysql') . DS . $this -> event['thumbnail'])) {
-				return BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getDate('mysql') . DS . $this -> event['thumbnail'];
+				return BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getDate('mysql') . DS . rawurlencode($this -> event['thumbnail']);
 			} else {
 				return BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg';
 			}
