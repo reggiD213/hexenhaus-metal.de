@@ -26,17 +26,29 @@ for ($i = 0; $i < $pages; $i++) {
 				$band = new Band($bands -> getBand($i));
 			?>
 			<li class="box">
-				<img class="left" src="<?php echo $band -> getThumb(); ?>">
-				<a target="_blank" href="<?php echo $band -> getLink(); ?>"><h3><?php echo $band -> getName(); ?></h3></a>
-				<hr>
-				<p><?php echo $band -> getDesc(); ?></p>
-				<hr>
-				<a target="_blank" href="<?php echo $band -> getLink(); ?>"><span class="dull">zur Homepage</span></a>
-				<?php if ($band -> getSoundcloud() != null) { ?>
-				<iframe height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/<?php echo $band -> getSoundcloud(); ?>"></iframe>
-				<?php } ?>
-			</li>
 
+				<div class="leftdiv left">
+					<a target="_blank" href="<?php echo $band -> getLink(); ?>">
+						<img src="<?php echo $band -> getThumb(); ?>">
+					</a>
+				</div>
+				
+				<div class="vr left"></div>
+				
+				<div class="rightdiv left">
+					<a target="_blank" href="<?php echo $band -> getLink(); ?>">
+						<h3 class="glow"><?php echo $band -> getName(); ?></h3>
+					</a>
+					<hr>
+					<p><?php echo $band -> getDesc(); ?></p>
+					<a target="_blank" href="<?php echo $band -> getLink(); ?>"><span class="dull">zur Homepage</span></a>
+					<?php if ($band -> getSoundcloud() != null) { ?>
+					<iframe height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/<?php echo $band -> getSoundcloud(); ?>"></iframe>
+					<?php } ?>
+				</div>
+
+			</li>
+			
 			<?php } ?>
 		</ul>
 		<hr>

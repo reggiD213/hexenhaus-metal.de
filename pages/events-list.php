@@ -25,19 +25,28 @@ for ($i = 0; $i < $pages; $i++) {
 				$event = new Event($events -> getEvent($i));
 				?>
 				<li class="box">
-					<a href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>">
-						<img class="left" src="<?php echo $event -> getThumb(); ?>">
-					</a>
-					<a href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>">
-						<h3 class="glow"><?php echo $event -> getDate('readable'); ?></h3>
+
+					<div class="leftdiv left">
+						<a href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>">
+							<img src="<?php echo $event -> getThumb(); ?>" alt="<?php echo $event -> getTitle(); ?>">
+						</a>
+					</div>
+					
+					<div class="vr left"></div>
+					
+					<div class="rightdiv left">
+						<a href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>">
+							<h3 class="glow"><?php echo $event -> getDate('readable'); ?></h3>
+							<hr>
+							<h3><?php echo $event -> getTitle(); ?></h3>
+						</a>
 						<hr>
-						<h3><?php echo $event -> getTitle(); ?></h3>
-					</a>
-					<hr>
-					<p><?php echo $event -> getDescShort(); ?></p>
-					<span class="dull">Eintritt: <?php echo $event -> getPrice() . "€ , Einlass: " . $event -> getTime(); ?></span>
-					<hr>
-					<a href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>"><button><i class="fa fa-info-circle"></i> Details</button></a>
+						<p><?php echo $event -> getDescShort(); ?></p>
+						<span class="dull">Eintritt: <?php echo $event -> getPrice() . "€ , Einlass: " . $event -> getTime(); ?></span>
+						<hr>
+						<a class="button" href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>"><i class="fa fa-info-circle"></i> Details</a>
+					</div>
+
 				</li>
 			<?php } ?>
 		</ul>
