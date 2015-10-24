@@ -30,8 +30,8 @@ class Event {
 
 	public function getThumb() {
 		if (isset($this -> event)) {
-			if (file_exists($_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getDate('mysql') . DS . $this -> event['thumbnail'])) {
-				return BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getDate('mysql') . DS . rawurlencode($this -> event['thumbnail']);
+			if (file_exists($_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getId() . DS . $this -> event['thumbnail'])) {
+				return BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getId() . DS . $this -> event['thumbnail'];
 			} else {
 				return BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg';
 			}
@@ -96,7 +96,11 @@ class Event {
 				return $date;
 			}
 			if ($format == 'jquery') {
-				$date = strftime("%Y, %m, %d", $date);
+				$y = strftime("%Y", $date);
+				$m = intval(strftime("%m", $date)) - 1;
+				$d = strftime("%d", $date);
+				$date = "$y, $m, $d";
+								
 				return $date;
 			}
 			if ($format == 'readable') {

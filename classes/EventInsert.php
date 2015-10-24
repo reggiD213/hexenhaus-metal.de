@@ -10,13 +10,14 @@ class EventInsert extends Database {
 	private $guests;
 	private $date;
 	private $time;
-	
+	private $newId;
 	
 	public function __construct() {
 		if (isset($_POST['action'])) {
 			$this -> connect();
 			$this -> assignVars();
 			$this -> doInsert();
+			$this -> doThumbnail();
 		}
 	}
 		
@@ -24,14 +25,10 @@ class EventInsert extends Database {
 		foreach ($_POST as $key => $value) {
 			$this -> {$key} = mysqli_real_escape_string($this -> db_connection, $_POST[$key]);	
 		}
-		if ($_FILES['thumbnail']['name'] != null) {
-			$this -> doThumbnail();
-		}
 	}
 	
 	private function doThumbnail() {
-		$time = $this -> date;
-		$eventfolder = EVENTIMAGEPATH . DS . $time;
+		$eventfolder = EVENTIMAGEPATH . DS . $this -> newId;
 
 		if (!file_exists($eventfolder)) {
 		    mkdir($eventfolder, 0777, true);
@@ -57,9 +54,9 @@ class EventInsert extends Database {
 
 		$result = $this -> db_connection -> query($sql);
 		
-		$newId = mysqli_insert_id($this -> db_connection);
+		$this -> $newId = mysqli_insert_id($this -> db_connection);
 		
-		header('Location: ' . BASEPATH . DS . 'members' . DS . 'adm-events' . DS . $newId);
+		header('Location: ' . BASEPATH . DS . 'members' . DS . 'adm-events' . DS . $this -> newId);
 	}
 	
 }

@@ -22,7 +22,6 @@ $eventDelete = new EventDelete($event);
 		</li>
 		<li>
 			<label for="event_time">Einlass:</label>
-			<!--<input id="event_time" class="event_input" type="time" value="<?php echo $event -> getTime('.'); ?>" name="time" autocomplete="off" required />-->
 			<input id="event_time" class="event_input" type="text" value="<?php echo $event -> getTime(); ?>" data-scroll-default="<?php echo $event -> getTime(); ?>" name="time" autocomplete="off" required />
 		</li>
 		

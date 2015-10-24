@@ -17,6 +17,9 @@ class EventUpdate extends Database {
 			$this -> event_id = $eventId;
 			$this -> assignVars();
 			$this -> doUpdate();
+			if ($_FILES['thumbnail']['name'] != null) {
+				$this -> doThumbnail();
+			}
 		}
 	}
 		
@@ -24,15 +27,10 @@ class EventUpdate extends Database {
 		foreach ($_POST as $key => $value) {
 			$this -> {$key} = mysqli_real_escape_string($this -> db_connection, $_POST[$key]);	
 		}
-		if ($_FILES['thumbnail']['name'] != null) {
-			$this -> doThumbnail();
-		}
 	}
-	
+
 	private function doThumbnail() {
-		$time = $this -> date;
-		$time = strtotime($time);
-		$eventfolder = EVENTIMAGEPATH . DS . strftime("%Y_%m_%d",$time);
+		$eventfolder = EVENTIMAGEPATH . DS . $this -> event_id;
 
 		if (!file_exists($eventfolder)) {
 		    mkdir($eventfolder, 0777, true);
@@ -47,7 +45,7 @@ class EventUpdate extends Database {
 		
 		$uploadfile = $eventfolder . DS . $newname;
 		
-		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);		
+		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);
 	}
 		
 	private function doUpdate() {		
