@@ -11,6 +11,7 @@ if ($eventId == 'new') {
 
 $eventDelete = new EventDelete($event);
 
+
 ?>
 
 <form enctype="multipart/form-data" class="box events" method="post" action="<?php echo BASEPATH . DS . $page . DS . $tab . DS . $eventId; ?>" name="eventform">
@@ -47,10 +48,10 @@ $eventDelete = new EventDelete($event);
 			<input id="event_guests" class="event_input" type="number" step="1" min="0" max="500" value="<?php echo $event -> getGuests(); ?>" name="guests" autocomplete="off" placeholder="Anzahl an erschienenen Gästen (optional)" />
 		</li>
 		<li>
-			<label for="event_thumb">Thumbnail: </label><br>
+			<label for="event_image">Image: </label><br>
 			<img src="<?php echo $event -> getThumb(); ?>">
 			
-			<input id="event_thumb" class="event_input file_input" type="file" name="thumbnail" />
+			<input id="event_image" class="event_input file_input" type="file" name="image" />
 		</li>
 		<li>
 			<button class="left" type="submit" name="action">

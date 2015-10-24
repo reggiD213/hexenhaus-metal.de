@@ -13,6 +13,9 @@ class BandInsert extends Database {
 			$this -> connect();
 			$this -> assignVars();
 			$this -> doInsert();
+			$this -> doThumbnail();
+			$this -> updateThumbnail();
+			$this -> doRedirect();
 		}
 	}
 		
@@ -20,44 +23,58 @@ class BandInsert extends Database {
 		foreach ($_POST as $key => $value) {
 			$this -> {$key} = mysqli_real_escape_string($this->db_connection,$_POST[$key]);	
 		}
-		if ($_FILES['thumbnail']['name'] != null) {
-			$this -> doThumbnail();
-		}
 		if (strlen($this -> soundcloud) > 8) {
 			$this -> doSoundcloud();
 		}
 	}
 	
 	private function doThumbnail() {
-		$now = strftime("%Y_%m_%d",time());
-		
 		$name = $_FILES["thumbnail"]["name"];
-		$ext = end(explode(".", $name));
+		$ext = strtolower(end(explode(".", $name)));
 		
-		$newname = $now . $this -> name . '.' . $ext;
+		$uploadname = 'upload.' . $ext;
+		$thumbname = $this -> name . '.' . $ext;
 		
-		$this -> thumbnail = mysqli_real_escape_string($this -> db_connection, $newname);
+		$this -> thumbnail = mysqli_real_escape_string($this -> db_connection, $thumbname);
 		
-		$uploadfile = BANDIMAGEPATH . DS . $newname;
-		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);	
+		$uploadfile = BANDIMAGEPATH . DS . $uploadname;
+		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);
+		
+		$resize = new ResizeImage($uploadfile, $ext);
+		$resize -> resizeImage(234, 234, 'landscape');
+		$resize -> saveImage(BANDIMAGEPATH . DS . $this -> name, 90);
+		
+		unlink($uploadfile);
 	}
-	
+
 	private function doInsert() {		
 		$sql = "INSERT INTO bands
-				(name, thumbnail, `desc`, link, soundcloud) 
+				(name, `desc`, link, soundcloud) 
 				values
-				('$this->name', '$this->thumbnail', '$this->desc', '$this->link', '$this->soundcloud')";
+				('$this->name', '$this->desc', '$this->link', '$this->soundcloud')";
 
 		$result = $this->db_connection->query($sql);
 		
-		$newId = mysqli_insert_id($this->db_connection);
-		header('Location: ' . BASEPATH . DS . 'members' . DS . 'adm-bands' . DS . $newId);
+		$this -> newId = mysqli_insert_id($this->db_connection);
+		
+	}
+	
+	private function updateThumbnail() {		
+		$sql = "UPDATE bands SET
+				thumbnail = '$this->thumbnail'
+				WHERE band_id = '$this->newId'";
+				echo "check";
+		$this->result = $this->db_connection->query($sql);
 	}
 
 	private function doSoundcloud() {
 		$firstCut = strstr($this -> soundcloud, '/users/');
 		
 		$this -> soundcloud = substr($firstCut, 7, 8); 
+	}
+	
+	private function doRedirect() {
+		header('Location: ' . BASEPATH . DS . 'members' . DS . 'adm-bands' . DS . $this -> newId);
 	}
 	
 }

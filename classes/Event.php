@@ -27,6 +27,18 @@ class Event {
 		}
 
 	}
+	
+	public function getImage() {
+		if (isset($this -> event)) {
+			if (file_exists($_SERVER['DOCUMENT_ROOT'] . DS . BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getId() . DS . $this -> event['image'])) {
+				return BASEPATH . DS . EVENTIMAGEPATH . DS . $this -> getId() . DS . $this -> event['image'];
+			} else {
+				return BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg';
+			}
+		} else {
+			return BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg';
+		}
+	}
 
 	public function getThumb() {
 		if (isset($this -> event)) {
@@ -38,7 +50,6 @@ class Event {
 		} else {
 			return BASEPATH . DS . IMAGEPATH . DS . 'not-available.jpg';
 		}
-
 	}
 
 	public function getDescShort() {

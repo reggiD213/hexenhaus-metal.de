@@ -33,6 +33,7 @@ $bandDelete = new BandDelete($band);
 		<li>
 			<label for="band_thumb">Thumbnail: </label><br>
 			<img src="<?php echo $band -> getThumb(); ?>">
+			<?php echo $band -> getThumb(); ?>
 			<input id="band_thumb" class="band_input file_input" type="file" name="thumbnail" />
 		</li>
 		<li>

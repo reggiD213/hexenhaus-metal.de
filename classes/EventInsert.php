@@ -4,6 +4,7 @@ class EventInsert extends Database {
 	
 	private $title;
 	private $thumbnail;
+	private $image;
 	private $desc_short;
 	private $desc_long;
 	private $price;
@@ -17,7 +18,9 @@ class EventInsert extends Database {
 			$this -> connect();
 			$this -> assignVars();
 			$this -> doInsert();
-			$this -> doThumbnail();
+			$this -> doImages();
+			$this -> updateImages();
+			$this -> doRedirect();
 		}
 	}
 		
@@ -27,35 +30,59 @@ class EventInsert extends Database {
 		}
 	}
 	
-	private function doThumbnail() {
+	private function doImages() {
 		$eventfolder = EVENTIMAGEPATH . DS . $this -> newId;
 
 		if (!file_exists($eventfolder)) {
 		    mkdir($eventfolder, 0777, true);
 		}
 		
-		$name = $_FILES["thumbnail"]["name"];
-		$ext = end(explode(".", $name));
+		$name = $_FILES["image"]["name"];
+		$ext = strtolower(end(explode(".", $name)));
 		
-		$newname = 'thumbnail.'. $ext;
+		$uploadname = 'upload.' .$ext;
+		$imagename = 'image.'. $ext;
+		$thumbname = 'thumbnail.'. $ext;
 		
-		$this -> thumbnail = mysqli_real_escape_string($this -> db_connection, $newname);
 		
-		$uploadfile = $eventfolder . DS . $newname;
+		$this -> image = mysqli_real_escape_string($this -> db_connection, $imagename);
+		$this -> thumbnail = mysqli_real_escape_string($this -> db_connection, $thumbname);
 		
-		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);
+		$uploadfile = $eventfolder . DS . $uploadname;
+		move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
+		
+		$resize = new ResizeImage($uploadfile, $ext);
+		$resize -> resizeImage(234, 234, 'landscape');
+		$resize -> saveImage($eventfolder . DS . 'thumbnail', 90);
+				
+		$resize -> resizeImage(800, 800, 'landscape');
+		$resize -> saveImage($eventfolder . DS . 'image', 90);
+		
+		unlink($uploadfile);
 	}
 	
 	private function doInsert() {
 		$sql = "INSERT INTO events
-				(title, thumbnail, desc_short, desc_long, price, guests, date, time) 
+				(title, desc_short, desc_long, price, guests, date, time) 
 				values
-				('$this->title', '$this->thumbnail', '$this->desc_short', '$this->desc_long', '$this->price', '$this->guests', '$this->date', '$this->time')";
+				('$this->title', '$this->desc_short', '$this->desc_long', '$this->price', '$this->guests', '$this->date', '$this->time')";
 
 		$result = $this -> db_connection -> query($sql);
-		
-		$this -> $newId = mysqli_insert_id($this -> db_connection);
-		
+
+		$this -> newId = mysqli_insert_id($this -> db_connection);
+	}
+	
+	private function updateImages() {		
+		$sql = "UPDATE events SET
+				thumbnail = '$this->thumbnail',
+				image = '$this->image'
+				WHERE event_id = '$this->newId'";
+				
+		$this->result = $this->db_connection->query($sql);
+	}
+	
+	
+	private function doRedirect() {
 		header('Location: ' . BASEPATH . DS . 'members' . DS . 'adm-events' . DS . $this -> newId);
 	}
 	

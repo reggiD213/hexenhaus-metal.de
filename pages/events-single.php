@@ -15,8 +15,8 @@ $event = new Event($events -> getEvent());
 			<span class="dull right" style="line-height: 36px">Eintritt: <?php echo $event -> getPrice(). "€ , Einlass: " . $event -> getTime(); ?></span>
 			<div class="clear"></div>
 			<hr>
-			<img class="right" src="<?php echo $event -> getThumb(); ?>" alt="<?php echo $event -> getTitle(); ?>">
-			
+			<img class="right" src="<?php echo $event -> getImage(); ?>" alt="<?php echo $event -> getTitle(); ?>">
+			<?php echo $event -> getImage(); ?>
 			<p><?php echo $event -> getDescLong(); ?></p>
 		</div>
 	</div>

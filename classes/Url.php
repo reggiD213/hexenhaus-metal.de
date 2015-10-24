@@ -6,8 +6,6 @@ class Url {
 	public function __construct() {
 		$this -> path = $this -> getPath();
 
-		define('BASEPATH', $this -> path['base']);
-
 		return $this -> path;
 	}
 

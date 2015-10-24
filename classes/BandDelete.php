@@ -15,9 +15,7 @@ class BandDelete extends Database {
 	}
 
 	private function deleteFiles($band) {
-		$this -> thumbnail = $_SERVER['DOCUMENT_ROOT'] . DS . $band -> getThumb();
-		
-		unlink($this -> thumbnail);
+		unlink($_SERVER['DOCUMENT_ROOT'] . DS . $band -> getThumb());
 	}
 
 	private function doDelete() {

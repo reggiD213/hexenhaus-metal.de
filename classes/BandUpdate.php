@@ -15,6 +15,10 @@ class BandUpdate extends Database {
 			$this -> band_id = $bandId;
 			$this -> assignVars();
 			$this -> doUpdate();
+			if ($_FILES['thumbnail']['name'] != null) {
+				$this -> doThumbnail();
+				$this -> updateThumbnail();
+			}
 		}
 	}
 		
@@ -22,12 +26,30 @@ class BandUpdate extends Database {
 		foreach ($_POST as $key => $value) {
 			$this -> {$key} = mysqli_real_escape_string($this -> db_connection, $_POST[$key]);	
 		}
-		if ($_FILES['thumbnail']['name'] != null) {
-			$this -> doThumbnail();
-		}
 		if (strlen($this -> soundcloud) > 8) {
 			$this -> doSoundcloud();
 		}
+	}
+	
+	private function doThumbnail() {
+		
+		$name = $_FILES["thumbnail"]["name"];
+		$ext = strtolower(end(explode(".", $name)));
+		
+		$uploadname = 'upload.' . $ext;
+		$thumbname = $this -> name . '.' . $ext;
+		
+		$this -> thumbnail = mysqli_real_escape_string($this -> db_connection, $thumbname);
+		
+		$uploadfile = BANDIMAGEPATH . DS . $uploadname;
+		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);
+		
+		$resize = new ResizeImage($uploadfile, $ext);
+		$resize -> resizeImage(234, 234, 'landscape');
+		$resize -> saveImage(BANDIMAGEPATH . DS . $this -> name, 90);
+		
+		unlink($uploadfile);
+		
 	}
 	
 	private function doUpdate() {
@@ -44,18 +66,12 @@ class BandUpdate extends Database {
 		$result = $this->db_connection->query($sql) or die(mysqli_error($this -> db_connection));
 	}
 	
-	private function doThumbnail() {
-		$now = strftime("%Y_%m_%d",time());
-		
-		$name = $_FILES["thumbnail"]["name"];
-		$ext = end(explode(".", $name));
-		
-		$newname = $now . $this -> name . '.' . $ext;
-		
-		$this -> thumbnail = mysqli_real_escape_string($this -> db_connection, $newname);
-		
-		$uploadfile = BANDIMAGEPATH . DS . $newname;
-		move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile);	
+		private function updateThumbnail() {		
+		$sql = "UPDATE bands SET
+				thumbnail = '$this->thumbnail'
+				WHERE band_id = '$this->band_id'";
+				
+		$this->result = $this->db_connection->query($sql);
 	}
 	
 	private function doSoundcloud() {
