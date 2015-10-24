@@ -16,7 +16,6 @@ $event = new Event($events -> getEvent());
 			<div class="clear"></div>
 			<hr>
 			<img class="right" src="<?php echo $event -> getImage(); ?>" alt="<?php echo $event -> getTitle(); ?>">
-			<?php echo $event -> getImage(); ?>
 			<p><?php echo $event -> getDescLong(); ?></p>
 		</div>
 	</div>
