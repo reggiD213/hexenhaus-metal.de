@@ -41,7 +41,7 @@ $eventDelete = new EventDelete($event);
 
 		<li>
 			<label for="event_price">Preis [€]:</label>
-			<input id="event_price" class="event_input" type="number" step="0.01" min="0.01" max="99" value="<?php echo $event -> getPrice('.'); ?>" name="price" autocomplete="off" placeholder="Eintrittspreis eingeben" required />
+			<input id="event_price" class="event_input" type="number" step="0.01" min="0.00" max="99" value="<?php echo $event -> getPrice('.'); ?>" name="price" autocomplete="off" placeholder="Eintrittspreis eingeben" required />
 		</li>
 		<li>
 			<label for="event_guests">Gäste: </label>
