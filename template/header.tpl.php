@@ -8,6 +8,8 @@
 			<div class="box newsticker">
 				<ul id="newsticker" class="layout">
 					<li>Unsere Brandneue Homepage ist Online! Künftig erfahrt ihr alles Neue immer zuerst hier!</li>
+                                        <li>Bauarbeiten an Linie 2, bitte neue Anfahrtsskizze beachten!</li>
+                                        <li>Das Hexenhaus-Team wünscht frohe Weihnachten!</li>
 				</ul>
 			</div>
 			
