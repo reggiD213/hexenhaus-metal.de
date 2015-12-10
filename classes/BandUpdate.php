@@ -26,7 +26,7 @@ class BandUpdate extends Database {
 		foreach ($_POST as $key => $value) {
 			$this -> {$key} = mysqli_real_escape_string($this -> db_connection, $_POST[$key]);	
 		}
-		if (strlen($this -> soundcloud) > 8) {
+		if (strlen($this -> soundcloud) > 10) {
 			$this -> doSoundcloud();
 		}
 	}
@@ -75,9 +75,11 @@ class BandUpdate extends Database {
 	}
 	
 	private function doSoundcloud() {
-		$firstCut = strstr($this -> soundcloud, '/users/');
+		//remove evething until /users/
+		$this->soundcloud = strstr($this->soundcloud, "/users/");
 		
-		$this -> soundcloud = substr($firstCut, 7, 8); 
+		//remove everything from '&' leaving only the number behind
+		$this->soundcloud = strstr($this->soundcloud, '&', true);
 	}
 	
 }
