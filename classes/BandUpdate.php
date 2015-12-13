@@ -75,8 +75,9 @@ class BandUpdate extends Database {
 	}
 	
 	private function doSoundcloud() {
-		//remove evething until /users/
-		$this->soundcloud = strstr($this->soundcloud, "/users/");
+		//removes everything behind "/users/"
+		$firstCut = strstr($this -> soundcloud, '/users/');
+		$this -> soundcloud = substr($firstCut, 7); 
 		
 		//remove everything from '&' leaving only the number behind
 		$this->soundcloud = strstr($this->soundcloud, '&', true);
