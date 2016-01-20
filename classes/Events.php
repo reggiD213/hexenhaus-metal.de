@@ -44,8 +44,8 @@ class Events extends Database {
 		$upEvents = array();
 		foreach ($this->events as $key => $value) {
 			$date = $this -> events[$key]['date'];
-			$date = strtotime($date);
-
+			$date = strtotime($date . ' +1 day');
+			
 			if ($date >= $now) {
 				$upEvents[] = $this -> events[$key];
 			}
