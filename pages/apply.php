@@ -17,6 +17,14 @@
 				<li>Ihr verbreitet keine rechtsradikalen Materialien und spielt auch keine Lieder mit rechtsradikalen Inhalten, das selbe gilt für linksradikale Materialien und Inhalte (Einzige unveränderliche Regel! Wir vertreten keine extremen politische Meinungen!)</li>
 				<li>Solltet ihr Merchandising Artikel verkaufen wollen, gebt uns bitte vorher Bescheid!</li>
 			</ul>
+			
+			<p>
+				Ihr spielt in einer <strong>Metal</strong> -Band? Bewerbt euch einfach unter: <h3><a target="_blank" href="mailto:metalgigs@hexenhaus-metal.de">metalgigs@hexenhaus-metal.de</a></h3>
+			</p>
+			
+			<p>
+				Ihr spielt in einer <strong>Rock, Stoner, Doom</strong> -Band? Bewerbt euch einfach unter: <h3><a target="_blank" href="mailto:goodoldshit@hexenhaus-metal.de">goodoldshit@hexenhaus-metal.de</a></h3>
+			</p>
 		</div>
 		<h2>Technical Rider</h2>
 		<hr>
