@@ -15,8 +15,8 @@
 			Hexenhaus e.V.<br>
 			Mähringerweg 75<br>
 			89075 Ulm<br>
-			E-Mail: <?php //TODO Email eintragen ?><br>
-			Telefon: 0178 8372108<br></p>
+			E-Mail: Puddy@hexenhaus-metal.de<br>
+			Telefon: keine Angabe<br></p>
 			
 			<p>
 				<strong>Vertretungsberechtigte Personen:</strong><br>
@@ -26,15 +26,11 @@
 						Adresse s.o.
 					</li>
 					<li>
-						Olaf Ochmann, Vorstand, Schriftführer<br>
+						Patrick Koch, Vorstand, Schriftführer<br>
 						Adresse s.o.
 					</li>
 					<li>
 						Michael Refl, Vorstand<br>
-						Adresse s.o.
-					</li>
-					<li>
-						Patrick Koch, Vorstand<br>
 						Adresse s.o.
 					</li>
 				</ul>
