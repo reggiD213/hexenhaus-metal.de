@@ -28,8 +28,9 @@
 				<hr>
 				<a target="_blank" href="http://www.gold-ochsen.de/"><img src="<?php echo BASEPATH; ?>/images/goldochsen.png" alt="Gold Ochsen" style="width: calc(30% - 20px)"></a>
 				<a target="_blank" href="http://www.kopierland.de/"><img src="<?php echo BASEPATH; ?>/images/kopierland.png" alt="Kopierland" style="width: calc(70% - 20px)"></a>
-				<a target="_blank" href="http://www.gamperling-veranstaltungstechnik.de/"><img src="<?php echo BASEPATH; ?>/images/gamperling.png" alt="Gamperling Veranstaltungstechnik" style="width: calc(50% - 20px)"></a>
-				<a target="_blank" href="https://www.google.com/maps/place/KS+Getr%C3%A4nke+GmbH/@48.40772,9.992531,15z/data=!4m2!3m1!1s0x0:0x6cb389b7475023fe"><img src="<?php echo BASEPATH; ?>/images/ksgetraenke.png" alt="K+S Getränke" style="width: calc(50% - 20px)"></a>
+				<!--<a target="_blank" href="http://www.gamperling-veranstaltungstechnik.de/"><img src="<?php echo BASEPATH; ?>/images/gamperling.png" alt="Gamperling Veranstaltungstechnik" style="width: calc(50% - 20px)"></a>-->
+				<a target="_blank" href="https://www.google.com/maps/place/KS+Getr%C3%A4nke+GmbH/@48.40772,9.992531,15z/data=!4m2!3m1!1s0x0:0x6cb389b7475023fe"><img src="<?php echo BASEPATH; ?>/images/ksgetraenke.png" alt="K+S Getränke" style="width: calc(70% - 20px)"></a>
+				<a target="_blank" href="http://www.andreashessner.de"><img src="<?php echo BASEPATH; ?>/images/andreashessner.png" alt="Andreas Hessner" style="width: calc(30% - 20px)"></a>
 			</div>
 		</div>
 	</div>
