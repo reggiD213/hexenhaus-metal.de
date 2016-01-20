@@ -14,7 +14,7 @@
 			Fort Unterer Eselsberg<br>
 			Mähringer Weg 75<br>
 			89075 Ulm<br>
-			<a target="_blank" href="mailto:#">Email-Adresse</a>
+			<a target="_blank" href="mailto:info@hexenhaus-metal.de">info@hexenhaus-metal.de</a>
 		</div>
 	</div>
 </div>
