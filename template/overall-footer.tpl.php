@@ -7,8 +7,8 @@
 		<script src="<?php echo BASEPATH; ?>/libs/datepicker-de.js"></script>
 		<script src="<?php echo BASEPATH; ?>/libs/jonthornton-jquery-timepicker-19a3380/jquery.timepicker.min.js"></script>
 		<script src="<?php echo BASEPATH; ?>/libs/ckeditor/ckeditor.js"></script>
-		<script src="<?php echo BASEPATH; ?>/libs/newsTicker.js"></script>
 		<script src="<?php echo BASEPATH; ?>/libs/lightbox/js/lightbox.min.js"></script>
+		<script src="<?php echo BASEPATH; ?>/libs/jquery.newsTicker.js"></script>
 		
 		<script>
 			//jqueryui datepicker
@@ -31,10 +31,9 @@
 				});
 			});
 
-			$('#newsticker').newsTicker({
-				row_height: 42,
-				max_rows: 2,
-				duration: 10000
+			var newsticker1 = $('#newsticker1 .newsitem').newsTicker({
+				row_height: 100,
+				speed: 800
 			});
 		
 			var roxyFileman = 'libs/fileman/index.html'; 

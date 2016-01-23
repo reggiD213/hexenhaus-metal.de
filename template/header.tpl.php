@@ -5,14 +5,38 @@
 		</div>
 		
 		<div class="content67">
-			<div class="box newsticker">
-				<ul id="newsticker" class="layout">
-					<li>Unsere Brandneue Homepage ist Online! Künftig erfahrt ihr alles Neue immer zuerst hier!</li>
-                                        <li>Bauarbeiten an Linie 2, bitte neue Anfahrtsskizze beachten!</li>
-                                        <li>Das Hexenhaus-Team wünscht frohe Weihnachten!</li>
-				</ul>
+			<div id="newsticker1" class="box newsticker">
+				<div class="container">
+					<ul class="layout newsitem">
+						<li>
+							<br>
+							Unsere Brandneue Homepage ist Online! Künftig erfahrt ihr alles Neue immer zuerst hier!<br>
+							<br>
+							<br>
+						</li>
+						<li>
+							<br>
+							Bauarbeiten an Linie 2, bitte neue Anfahrtsskizze beachten!<br>
+							<br>
+							<br>
+						</li>
+					</ul>
+				</div>
 			</div>
 			
+			<div class="box newsticker_mobile">
+					<ul class="layout">
+						<li>
+							Unsere Brandneue Homepage ist Online! Künftig erfahrt ihr alles Neue immer zuerst hier!
+						</li>
+						<hr>
+						<li>
+							Bauarbeiten an Linie 2, bitte neue Anfahrtsskizze beachten!
+						</li>
+					</ul>
+			</div>
+			
+								
 			<div class="main_nav"><?php require_once 'navigation.tpl.php'; ?></div>
 		</div>
 	</div>

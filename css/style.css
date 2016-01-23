@@ -150,7 +150,7 @@ header, section, footer {
 /*small*/
 @media only screen and (max-width: 767px) {
 	header .newsticker {
-		padding: 15px;
+		display: none;
 	}	
 }
 
@@ -159,10 +159,17 @@ header, section, footer {
 	header, section, footer {
 		width: 750px;
 	}
+	
 	h2 {
 		font-size: 1.0em;
 	}
+	
 	header .newsticker {
+		font-size: 0.7em;
+
+	}
+	
+	header .main_nav {
 		font-size: 0.7em;
 	}
 }
@@ -172,10 +179,16 @@ header, section, footer {
 	header, section, footer {
 		width: 970px;
 	}
+	
 	h2 {
 		font-size: 1.3em;
 	}
+	
 	header .newsticker {
+		font-size: 0.9em;
+	}
+	
+	header .main_nav {
 		font-size: 0.9em;
 	}
 }
@@ -195,13 +208,20 @@ header, section, footer {
 	.content33 {
 		width: calc(100% / 3);
 	}
+	
+	header .main_nav {
+		margin-top: 41px;
+	}
+	
 	header .newsticker {
-		padding: 0;
-		height: 52px;
+		margin-top: 20px;
+		height: 75px;
+	}
+	
+	header .newsticker_mobile {
+		display: none;
 	}
 }
-
-
 
 /*HEADER START*/
 header {
@@ -214,10 +234,14 @@ header .logo {
 	width: auto;
 }
 
-header .newsticker {
-	margin-top: 20px;
+header .newsticker, header .newsticker_mobile {
 	text-align: center;
-	line-height: 32px;
+	line-height: 25px;
+	cursor: default;
+}
+
+header .newsticker li {
+	padding: 0;
 }
 
 header .logo img {
@@ -226,17 +250,6 @@ header .logo img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-header .main_nav_table {
-	width: 100%;
-	height: 136px;
-	display: table;
-}
-
-header .main_nav_cell {
-	display: table-cell;
-	vertical-align: bottom;
 }
 
 header .main_nav li, .member_nav li {
@@ -248,13 +261,13 @@ header .main_nav li, .member_nav li {
 	font-family: 'Roboto Slab', "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-header .main_nav ul {
+header .main_nav {
 	min-height: 60px;
 	line-height: 60px;
 	overflow: hidden;
 }
 
-.member_nav ul {
+.member_nav {
 	min-height: 40px;
 	line-height: 40px;
 	margin-bottom: 20px;
@@ -314,12 +327,6 @@ ul.bands li iframe {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-}
-
-.address {
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 1.5em;
 }
 
 img.get_there {

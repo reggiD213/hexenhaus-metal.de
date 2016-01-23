@@ -15,6 +15,7 @@
 	<link href="<?php echo BASEPATH; ?>/libs/lightbox/css/lightbox.css" rel="stylesheet">
 	<link href="<?php echo BASEPATH; ?>/libs/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet">
 	<link href="<?php echo BASEPATH; ?>/libs/jonthornton-jquery-timepicker-19a3380/jquery.timepicker.css" rel="stylesheet">
+	<link href="<?php echo BASEPATH; ?>/css/jquery.mCustomScrollbar.css" rel="stylesheet">
 	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
