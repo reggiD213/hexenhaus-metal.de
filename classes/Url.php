@@ -50,7 +50,7 @@ class Url {
 		return $this -> path['call_parts'][1];
 	}
 
-	public function getPeriod($page) {
+	public function getPeriod($page = null) {
 		if ($page == members) {
 			if (!isset($this -> path['call_parts'][2]) || $this -> path['call_parts'][2] == '') {
 				$this -> path['call_parts'][2] = 'all';

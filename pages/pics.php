@@ -23,6 +23,6 @@ $pics = new Pics();
 		</div>
 	</div>
 
-	<?php require_once 'sidebar_regular.tpl.php';?>
+	<?php require_once 'template/sidebar_regular.tpl.php';?>
 
 </div>
