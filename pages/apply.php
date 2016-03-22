@@ -30,41 +30,82 @@
 		<hr>
 		<div class="box">
 			<h3>FOH</h3>
-			<p>1x Mischpult Allen & Heath GL2000 Multi-Function Audio Mixing Console<br>
-			1x DBX 166xs Compressor/Limiter/Gate<br>
-			2x DBX 266xs Compressor/Gate<br>
-			1x Vestax SL201 Dual Compressor/Limiter<br>
-			1x Lexicon MX400XL Dual Stereo / Surround Reverb Effects Processor<br>
-			1x BSS FCS 966 Opal Constant Q Graphic EQ<br>
-			1x Behringer MX882 Ultralink Pro 8-Kanal Splitter/Mixer/Aufholverstärker<br>
-			1x Schreibtisch Lampe<br>
-			1x Mini LED Lampe mit Schwanenhals und Klemme (batteriebetrieben)</p>
-			<h3>Bühne</h3>
-			<p>2x RCF ART 322 A Topteile<br>
-			1x RCF ART 705 AS SubwooferB16<br>
-			2x HK Audio D.A.R.T Digital Active Reinforcement Tool Monitore<br>
-			1x HK Audio PR 115 X Monitor<br>
-			1x STK Professional Audio V-12 Plus Monitor Endstufev
-			1x Klotz Smart Link Series 24/8 Stage Box<br>
-			4x große Mikrofonstative<br>
-			1x kleines Mikrofonstativ<br>
-			3x Shure SM58 Mikrofone<br>
-			1x Sennheiser e606 Instrumenten-Mikrofon<br>
-			1x Sennheiser e609 Instrumenten-Mikrofon<br>
-			1x Anti-Schwingungsplatte für Bass-Anlage</p>
+			<p>
+                1x Mischpult Allen & Heath GL2000 Multi-Function Audio Mixing Console<br>
+                1x DBX 166xs Compressor/Limiter/Gate<br>
+                2x DBX 266xs Compressor/Gate<br>
+                1x Lexicon MX400XL Dual Stereo / Surround Reverb Effects Processor<br>
+                1x BSS FCS 966 Opal Constant Q Graphic EQ<br>
+                1x Zeck GF 230 Constant Q 2x30 Graphic EQ<br>
+                1x Behringer MX882 Ultralink Pro 8-Kanal Splitter/Mixer/Aufholverstärker<br>
+                1x Schreibtisch Lampe<br>
+                1x Mini LED Lampe mit Schwanenhals und Klemme (batteriebetrieben)
+            </p>
+            <h3>PA</h3>
+            <p>
+                2x RCF ART 322 A Topteile<br>
+                1x RCF ART 705 AS Subwoofer<br>
+                2x Novex PA6000 Subwoofer mit vorgeschalteter Frequenzweiche<br>
+                1x the t.amp TA 2400 Professional Power Amplifier - Subwoofer Endstufe
+            </p>
+			<h3>Monitoring</h3>
+			<p>
+                2x HK Audio Premium Series PR 115 X Monitore<br>
+                2x HK Audio MF15 Monitore<br>
+                1x Boost PX-2400 Professional Power Amplifier - Monitor Endstufe<br>
+                1x STK Professional Audio V-12 Plus - Monitor Endstufe<br>
+                Drumfill: 1x Yorkville ES700P Active Subwoofer + 1x HK Audio D.A.R.T Digital Active Reinforcement Tool Monitor
+            </p>
+            <h3>Mikrofonierung</h3>
+            <p>
+                1x Klotz Smart Link Series 24/8 Stage Box<br>
+                4x große Mikrofonstative<br>
+                3x kleine Mikrofonstative<br>
+                3x Shure SM58 Mikrofone<br>
+                1x Sennheiser e606 Instrumenten-Mikrofon<br>
+                1x Sennheiser e609 Instrumenten-Mikrofon<br>
+                1x AKG D112 Bassdrum Mikrofon<br>
+                1x Shure SM57 Mikrofon<br>
+                4x Electrovision D717 Tom-Mikrofone<br>
+                3x K&M 24030 Microphone Holder for Drums<br>
+                1x ART PDB DI-Box
+            </p>
+
 			<h3>Licht / Effekte</h3>
-			<p>1x Lichtpult eurolite SCENE SETTER 24<br>
-			8x Varytec LED PAR56 Scheinwerfer<br>
-			1x FX LAB G002EB Nebelmaschine</p>
+			<p>
+                1x Lichtpult eurolite SCENE SETTER 24<br>
+			    8x Varytec LED PAR56 Scheinwerfer<br>
+			    1x FX LAB G002EB Nebelmaschine<br>
+                + abwechselnde Specials (Hazer, Spots, LED Bars... --> siehe Konzert-Bilder auf Facebook)
+            </p>
 			<h3>Bar-Raum</h3>
-			<p>2x the box M1220 Topteile / Monitore<br>
-			1x the t.amp E-400 Endstufe<br>
-			1x Sony Bravia LCD Digital Colour TV</p>
+			<p>
+                2x the box M1220 Topteile / Monitore<br>
+			    1x the t.amp E-400 Endstufe<br>
+			    1x Sony Bravia LCD Digital Colour TV
+            </p>
 			<h3>DJ Equipment</h3>
-			<p>1x TASCAM X-17 Professional DJ Mixer<br>
-			1x Denon DN-X120 Battlemixer<br>
-			1x Mc Crypt DJ-2250 Doppel CD-Player<br>
-			1x Omnitronic CDP 440 Doppel CD-Player</p>
+			<p>
+                1x TASCAM X-17 Professional DJ Mixer mit 4 Kanälen, Fader, Mikrofon Eingang, Kopfhörer Ausgang<br>
+                1x Mc Crypt DJ-2250 Doppel CD-Player
+            </p>
+            <h3>Backline</h3>
+            <p>
+                1x Kustom 4x12er Guitar Cabinet mit Celestion Speaker, 260W RMS, 8 Ohm<br>
+                1x Anti-Schwingungsplatte für Bass-Anlage<br>
+                1x Bassdrum Tama Swingstar mit Evans Drum-Fell<br>
+                1x Standtom Tama Swingstar mit Evans Drum-Fell<br>
+                2x Hängetoms Tama Swingstar mit Evans Drum-Fellen<br>
+                2x Beckenständer Pearl<br>
+                1x Hocker<br>
+                <br>
+                (+ zum Jammen oder falls für Konzerte ausreichend, folgendes:<br>
+                2x No-Name Becken<br>
+                1x No-Name Snare mit einfachem No-Name Ständer<br>
+                2x No-Name Hi-Hat Becken mit etwas kurzer No-Name Hi-Hat-Maschine<br>
+                1x Peavey Gitarren-Combo<br>
+                1x Behringer Ultrabass Bass-Combo mit DI-Out)
+            </p>
 		</div>
 		
 	</div>
