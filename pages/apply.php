@@ -31,6 +31,7 @@
 		<div class="box">
 			<h3>FOH</h3>
 			<p>
+                1x Behringer X32 Digitalmischpult<br>
                 1x Mischpult Allen & Heath GL2000 Multi-Function Audio Mixing Console<br>
                 1x DBX 166xs Compressor/Limiter/Gate<br>
                 2x DBX 266xs Compressor/Gate<br>

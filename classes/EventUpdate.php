@@ -35,7 +35,7 @@ class EventUpdate extends Database {
 
 	private function doImages() {
 		$eventfolder = EVENTIMAGEPATH . DS . $this -> event_id;
-		
+
 		if (!file_exists($eventfolder)) {
 		    mkdir($eventfolder, 0777, true);
 		}
