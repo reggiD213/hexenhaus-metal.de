@@ -10,7 +10,7 @@
 					<ul class="layout newsitem">
 						<li>
 							<br>
-							Unsere Brandneue Homepage ist Online! Künftig erfahrt ihr alles Neue immer zuerst hier!<br>
+							Sommerpause von Juli bis August! Im September geht's weiter!<br>
 							<br>
 							<br>
 						</li>

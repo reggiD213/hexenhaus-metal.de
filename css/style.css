@@ -118,8 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 15px;
 	margin-bottom: 20px;
 	border: 1px solid #333333;
-	background-color: #000000;
-	background-image: url(../images/box-background.png);
+	background: #000000 url(../images/box-background.png);
 	overflow: hidden;
 }
 
@@ -334,8 +333,7 @@ img.get_there {
 	width: 100%;
 	margin-bottom: 20px;
 	border: 1px solid #333333;
-	background-color: #000000;
-	background-image: url(../images/box-background.png);
+	background: #000000 url(../images/box-background.png);
 }
 
 form.events input, form.events textarea, form.bands input, form.bands textarea, form.pics input {
@@ -377,12 +375,27 @@ ul.regular {
 	padding: 15px;
 	margin-bottom: 20px;
 	border: 1px solid #333333;
-	background-color: #000000;
-	background-image: url(../images/box-background.png);
+	background: #000000 url(../images/box-background.png);
 	overflow: hidden;
 }
 
-.regular img {
+.regular .summerbreak {
+	position: relative;
+}
+
+.regular .summerpic {
+	position: absolute;
+	top: 0;
+	left: -2px;
+	right: -2px;
+
+	width: calc(100% + 4px);
+	height: 100%;
+
+
+}
+
+.regular li img {
 	margin-top: 7px;
 	border: 1px solid #333333;
 	width: 100%;
