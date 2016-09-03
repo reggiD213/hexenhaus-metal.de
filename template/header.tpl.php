@@ -10,7 +10,7 @@
 					<ul class="layout newsitem">
 						<li>
 							<br>
-							Sommerpause von Juli bis August! Im September geht's weiter!<br>
+							Jetzt wieder geöffnet! Willkommen im Hexenhaus!<br>
 							<br>
 							<br>
 						</li>
@@ -27,7 +27,7 @@
 			<div class="box newsticker_mobile">
 					<ul class="layout">
 						<li>
-							Unsere Brandneue Homepage ist Online! Künftig erfahrt ihr alles Neue immer zuerst hier!
+							Jetzt wieder geöffnet! Willkommen im Hexenhaus!
 						</li>
 						<hr>
 						<li>
