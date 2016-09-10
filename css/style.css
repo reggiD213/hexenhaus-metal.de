@@ -369,6 +369,21 @@ ul.pagination li {
 	padding: 0;
 }
 
+.about .videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	border: 1px solid #333333;
+}
+
+.about .videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /*SIDEBARS STARt*/
 ul.regular {
 	text-align: center;

@@ -21,7 +21,8 @@
 		<hr>
 		<div class="box">
 			<p>
-				Allgemeine Anfragen:
+				Allgemeine Anfragen:<br>
+				<span class="dull">(Das Hexenhaus steht nicht für Privatvermietungen zur Verfügung.)</span>
 				<strong><a target="_blank" href="mailto:info@hexenhaus-metal.de">info@hexenhaus-metal.de</a></strong>
 			</p>
 			<p>
