@@ -12,7 +12,7 @@ $event = new Event($events -> getEvent());
 		<div class="box event">
 			<a class="left back button" href="<?php echo BASEPATH . DS .  $page; ?>"><i class="fa fa-arrow-circle-left"></i> Zurück</a>
 			<h3 class="glow left" style="line-height: 36px"><?php echo $event -> getDate('readable'); ?></h3>
-			<span class="dull right" style="line-height: 36px">Eintritt: <?php echo $event -> getPrice(). "€ , Einlass: " . $event -> getTime(); ?></span>
+			<span class="dull right" style="line-height: 36px">Eintritt: <?php echo $event -> getPrice(). " , Einlass: " . $event -> getTime(); ?></span>
 			<div class="clear"></div>
 			<hr>
 			<img class="right" src="<?php echo $event -> getImage(); ?>" alt="<?php echo $event -> getTitle(); ?>">

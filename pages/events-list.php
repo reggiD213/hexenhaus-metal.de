@@ -42,7 +42,7 @@ for ($i = 0; $i < $pages; $i++) {
 						</a>
 						<hr>
 						<p><?php echo $event -> getDescShort(); ?></p>
-						<span class="dull">Eintritt: <?php echo $event -> getPrice() . "€ , Einlass: " . $event -> getTime(); ?></span>
+						<span class="dull">Eintritt: <?php echo $event -> getPrice() . " , Einlass: " . $event -> getTime(); ?></span>
 						<hr>
 						<a class="button" href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>"><i class="fa fa-info-circle"></i> Details</a>
 					</div>

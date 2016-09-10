@@ -71,7 +71,13 @@ class Event {
 	public function getPrice($divider = ',') {
 		if (isset($this -> event)) {
 			$price = $this -> event['price'];
+			if ($price == 66 && $divider == ',') {
+				return "wird noch bekannt gegeben";
+			}
 			$price = number_format($price, 2, $divider, '');
+			if ($divider == ',') {
+				return $price . ' €';
+			}
 			return $price;
 		} else {
 			return "0,00";
