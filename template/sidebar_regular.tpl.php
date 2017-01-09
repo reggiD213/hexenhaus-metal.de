@@ -4,7 +4,7 @@
 	<ul class="box regular layout">
 		<!--summer <div class="summerbreak">-->
 			<li><a href="#"><h3 class="glow">Jeden 1. Samstag im Monat</h3><img src="<?php echo BASEPATH; ?>/images/good-old-shit.jpg" alt="Good Old Shit"></a></li>
-			<li><a href="#"><h3 class="glow">Jeden 2. Freitag im Monat</h3><img src="<?php echo BASEPATH; ?>/images/valley-of-doom.jpg" alt="Valley of Doom"></a></li>
+			<li><a href="#"><h3 class="glow">Jeden 2. Samstag im Monat</h3><img src="<?php echo BASEPATH; ?>/images/valley-of-doom.jpg" alt="Valley of Doom"></a></li>
 			<li><a href="#"><h3 class="glow">Jeden 3. Samstag im Monat</h3><img src="<?php echo BASEPATH; ?>/images/full-metal-night.jpg" alt="Full Metal Night"></a></li>
 
 		<!--summer	<img class="summerpic" src="<?php echo BASEPATH; ?>/images/summerbreak.png"">
