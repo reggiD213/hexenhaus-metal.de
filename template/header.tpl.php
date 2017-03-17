@@ -10,7 +10,7 @@
 					<ul class="layout newsitem">
 						<li>
 							<br>
-							Jetzt wieder geöffnet! Willkommen im Hexenhaus!<br>
+							Willkommen im Hexenhaus!<br>
 							<br>
 							<br>
 						</li>
@@ -27,7 +27,7 @@
 			<div class="box newsticker_mobile">
 					<ul class="layout">
 						<li>
-							Jetzt wieder geöffnet! Willkommen im Hexenhaus!
+							Willkommen im Hexenhaus!
 						</li>
 						<hr>
 						<li>
