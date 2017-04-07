@@ -5,7 +5,7 @@ class Event {
 	//array of one events
 	public $event;
 
-	public function __construct($event) {
+	public function __construct($event = null) {
 		if (isset($event)) {
 			$this -> event = $event;
 		}
@@ -135,6 +135,14 @@ class Event {
 			return $time;
 		} else {
 			return "20:00";
+		}
+	}
+	
+	public function getTickets() {
+		if (isset($this -> event)) {
+				return $this -> event['tickets'] == 1;
+		} else {
+			return false;
 		}
 	}
 

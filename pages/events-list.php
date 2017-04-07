@@ -44,7 +44,11 @@ for ($i = 0; $i < $pages; $i++) {
 						<p><?php echo $event -> getDescShort(); ?></p>
 						<span class="dull">Eintritt: <?php echo $event -> getPrice() . " , Einlass: " . $event -> getTime(); ?></span>
 						<hr>
-						<a class="button" href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>"><i class="fa fa-info-circle"></i> Details</a>
+						<a class="button left" href="<?php echo BASEPATH . DS . $page . DS . $event -> getId(); ?>"><i class="fa fa-info-circle"></i> Details</a>
+						<?php
+						if ($event->getTickets())
+							echo '<a class="button left" target="_blank" href="https://www.ulmtickets.de/orte/hexenhaus" style="margin-left: 10px;"><i class="fa fa-shopping-cart"></i> Tickets</a>';
+						?>
 					</div>
 
 				</li>

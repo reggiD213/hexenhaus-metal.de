@@ -11,6 +11,7 @@ class EventUpdate extends Database {
 	private $price;
 	private $guests;
 	private $date;
+	private $tickets;
 	
 	public function __construct($eventId) {
 		if (isset($_POST['action'])) {
@@ -31,6 +32,8 @@ class EventUpdate extends Database {
 		foreach ($_POST as $key => $value) {
 			$this -> {$key} = mysqli_real_escape_string($this -> db_connection, $_POST[$key]);	
 		}
+
+		$this->tickets = $this->tickets == 1 ? 1 : 0;
 	}
 
 	private function doImages() {
@@ -72,7 +75,8 @@ class EventUpdate extends Database {
 				price = '$this->price',
 				guests = '$this->guests',
 				date = '$this->date',
-				time = '$this->time'
+				time = '$this->time',
+				tickets = '$this->tickets'
 				WHERE event_id = '$this->event_id'";
 				
 		$this->result = $this->db_connection->query($sql);

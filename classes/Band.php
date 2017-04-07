@@ -5,7 +5,7 @@ class Band {
 	//array of one band
 	private $band;
 
-	public function __construct($band) {
+	public function __construct($band = null) {
 		if (isset($band)) {
 			$this -> band = $band;
 		}

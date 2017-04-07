@@ -12,6 +12,7 @@ class EventInsert extends Database {
 	private $date;
 	private $time;
 	private $newId;
+	private $tickets;
 	
 	public function __construct() {
 		if (isset($_POST['action'])) {
@@ -28,6 +29,8 @@ class EventInsert extends Database {
 		foreach ($_POST as $key => $value) {
 			$this -> {$key} = mysqli_real_escape_string($this -> db_connection, $_POST[$key]);	
 		}
+
+		$this->tickets = $this->tickets == 1 ? 1 : 0;
 	}
 	
 	private function doImages() {
@@ -63,9 +66,9 @@ class EventInsert extends Database {
 	
 	private function doInsert() {
 		$sql = "INSERT INTO events
-				(title, desc_short, desc_long, price, guests, date, time) 
+				(title, desc_short, desc_long, price, guests, date, time, tickets) 
 				values
-				('$this->title', '$this->desc_short', '$this->desc_long', '$this->price', '$this->guests', '$this->date', '$this->time')";
+				('$this->title', '$this->desc_short', '$this->desc_long', '$this->price', '$this->guests', '$this->date', '$this->time', '$this->tickets')";
 
 		$result = $this -> db_connection -> query($sql);
 

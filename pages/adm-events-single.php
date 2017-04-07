@@ -48,6 +48,10 @@ $eventDelete = new EventDelete($event);
 			<input id="event_guests" class="event_input" type="number" step="1" min="0" max="500" value="<?php echo $event -> getGuests(); ?>" name="guests" autocomplete="off" placeholder="Anzahl an erschienenen Gästen (optional)" />
 		</li>
 		<li>
+			<label for="event_tickets">Ticketvorverkauf: </label><br>
+			<input id="event_tickets" class="event_input" type="checkbox" value="1" <?php echo $event->getTickets() == 1 ? 'checked' : ''; ?> name="tickets" autocomplete="off" />
+		</li>
+		<li>
 			<label for="event_image">Image: </label><br>
 			<img src="<?php echo $event -> getThumb(); ?>">
 			

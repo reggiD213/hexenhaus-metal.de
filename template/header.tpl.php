@@ -10,6 +10,12 @@
 					<ul class="layout newsitem">
 						<li>
 							<br>
+							Jetzt neu: Ticketvorverkauf <a style="display: inline; text-decoration: underline;" target="_blank" href="https://www.ulmtickets.de/orte/hexenhaus">hier</a><br>
+							<br>
+							<br>
+						</li>
+						<li>
+							<br>
 							Willkommen im Hexenhaus!<br>
 							<br>
 							<br>
